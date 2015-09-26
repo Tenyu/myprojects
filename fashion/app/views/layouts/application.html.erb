@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fashion</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+
+<% if user_signed_in? %>
+  <div class="header" style="border-bottom:1px solid black;">
+  <h1 style="padding-left:20px;padding-top:5px;"><a href="/tweets" style="text-decoration:none;color:black;">How do I look ?</a></h1>
+  <div style="text-align:right; padding-right:30px;">
+    <a href="/tweets" class="btn btn-primary btn-lg active">HOME</a>
+    <a href="/tweets/new" class="btn btn-primary btn-lg active">投稿する</a>
+    <a href="/users/<%= current_user.id %>" class="btn btn-primary btn-lg active">マイページ</a>
+    <%= link_to 'ログアウト', destroy_user_session_path ,method: :delete , class: "btn btn-primary btn-lg active" %>
+  </div>
+  </div>
+<% else %>
+<div class="header">
+  <div class="header_right" style="text-align:right;padding-right:30px;padding-top:30px;">
+    <%= link_to '新規登録' , new_user_registration_path , class: "btn btn-primary btn-lg active" %>
+    <%= link_to 'ログイン' , new_user_session_path , class: "btn btn-primary btn-lg active" %>  
+    </div>
+    <div class="header-bottom" style="margin-top:-20px;">
+    <h1 style="font-size:40px; text-align:center;">How do I look ? <br /><h2 style="color:#AAAAAA;font-size:40px;text-align:center;">あなたのファッションをみんなに。</h2></h1>
+  </div>
+</div>
+<% end %>
+
+<%= yield %>
+
+</body>
+</html>
+  

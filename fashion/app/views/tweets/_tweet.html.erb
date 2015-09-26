@@ -1,0 +1,23 @@
+    <div class="thumbnail"  style="margin:0 auto;margin-top:10px; position:relative;">
+      <div class="img_box" style="max-height: 300px; overflow: hidden;vdisplay:block;">
+        <a href="/entry/<%= tweet.id %>"><img src="<%= tweet.image %>" alt="" style="width:100%; vertical-align: top;"></a>
+
+      </div>
+      <% if tweet.style == 0 %>
+            <p class="style" style="background-color:#BB0000;color:white;">ストリート系</p>
+       <% elsif tweet.style == 1 %>
+            <p class="style" style="background-color:pink;">可愛い系</p>
+        <% elsif tweet.style == 2 %>
+            <p class="style" style="background-color:black;color:white;">COOL系</p>
+        <% elsif tweet.style == 3 %>
+            <p class="style" style="background-color:orange;">カジュアル系</p>
+        <% elsif tweet.style == 4 %>
+      <% end %>
+      <div class="caption" style="text-align:right;">
+        <p class="caption_info" style="text-align:left;"><a href="/users/<%= tweet.user.id %>"><%= tweet.user.nickname %>さん</a></p>
+        <p class="caption_info" style="text-align:right;margin-top:-20px;">
+          <a href="/entry/<%= tweet.id %>" class="btn btn-primary" role="button">コメントをよむ</a>
+        </p>
+
+      </div>
+    </div>

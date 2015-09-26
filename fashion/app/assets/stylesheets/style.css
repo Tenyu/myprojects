@@ -1,0 +1,115 @@
+html{
+    color:#000;background:#FFF;
+    width: 100%;
+    height: 100%;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,
+pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
+    margin:0;padding:0;
+}
+.header{
+  width: 100%;
+  background-color: white;
+}
+body{
+  background-color: #FFFAFA;
+  padding-bottom: 100px;
+}
+
+.btn-primary.active{
+   color:black;
+}
+.caption_info{
+  display: inline-block;
+  width:100%;
+}
+.new{
+  height: 400px;
+  text-align: center;
+  padding-top: 30px;
+  background-color: #FFCC99;
+  border-radius:10px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+}
+.row{
+}
+.email{
+  width: 200px;
+}
+.field{
+  text-align: center;
+  margin-top:30px;
+}
+.field_box{
+  width:300px;
+
+}
+.sign{
+  padding:30px 0;
+}
+.sign_box{
+  padding-top:30px;
+}
+.sign_title{
+  text-align:center;
+  font-size:30px;
+  border-bottom:1px solid black;
+  margin:0 30px;
+}
+.actions{
+  text-align:center;
+  margin-top:30px;
+}
+.sign_button{
+  width:100px;
+  height:40px;
+  border-radius: 10px;
+}
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.review_box
+{
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.review_box:before, .review_box:after
+{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:0;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.review_box:after
+{
+    right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+}
+.style{
+  margin-right:5px; 
+  border-redius:10px;
+  border-radius: 10px;    /* CSS3草案 */
+  -webkit-border-radius: 10px;  /* Safari,Google Chrome用 */
+  -moz-border-radius: 10px; /* Firefox用 */
+  text-align: center;
+  width: 100px;
+  position: absolute;
+  bottom:14px;
+}
