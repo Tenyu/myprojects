@@ -1,23 +1,23 @@
 <div class="row">
-    <div class="thumbnail" style="max-width:400px;margin: 0 auto;">
+  <div class="thumbnail" style="max-width:400px;margin: 0 auto;">
     <img src="<%= @tweet.image %>" alt="" style="width:100%;height:100%;">
-      </div>
-    <div class="review_box"style="max-width:400px;margin: 0 auto;margin-top:20px;padding-top:10px;background-color:white;border-radius:10px;">
+  </div>
+  <div class="review_box"style="max-width:400px;margin: 0 auto;margin-top:20px;padding-top:10px;background-color:white;border-radius:10px;">
     <h4 style="text-align:center;border-bottom:1px solid black;margin: 0 30px;">コメント一覧</h4>
-      <% @tweet.reviews.each do |review|%>
-        <div class="thumbnail__caption" style="margin-top:30px;">
-          <h3 class="" title="<%= review.nickname%>" style="font-size:12px; font-family:sans-serif; ">
-            <%= review.user.nickname %>
-          </h3>
-          <p style="font-size:18px;padding-left:10px;">
-            <%= review.review%>
-          </p>
-        </div>
-      <% end %>
+    <% @tweet.reviews.each do |review|%>
+    <div class="thumbnail__caption" style="margin-top:30px;">
+      <h3 class="" title="<%= review.nickname%>" style="font-size:12px; font-family:sans-serif; ">
+        <%= review.user.nickname %>
+      </h3>
+      <p style="font-size:18px;padding-left:10px;">
+        <%= review.review%>
+      </p>
+    </div>
+    <% end %>
 
     <%= form_tag("/entry/#{@tweet.id}") do %>
-      <div style="height:100px; width:100%; margin: 30px auto;">
-        <textarea name="review" placeholder="<%= @tweet.user.nickname %>さんにコメントを書く" style="width: 100%;background-color:white;"></textarea>
+    <div style="height:100px; width:100%; margin: 30px auto;">
+      <textarea name="review" placeholder="<%= @tweet.user.nickname %>さんにコメントを書く" style="width: 100%;background-color:white;"></textarea>
       <div class="col10 push1" style="text-align:center;">
         <button type="submit" class="btn btn--block">投稿する<i class="icon-arrow-right"></i></button>
       </div>

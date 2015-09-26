@@ -6,7 +6,6 @@ class TweetsController < ApplicationController
 
   def new
     @tweet = Tweet.new
-    @str   = ["ストリート系","可愛い系"]
   end
 
   def create
